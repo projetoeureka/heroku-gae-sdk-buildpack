@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=$1
+ENV_DIR=$3
+
+mkdir -p ${BUILD_DIR}/opt
+echo "Debug info"
+echo $PATH
+echo `which python`
+gae activate_sdk --version 1.7.6 --dest ${BUILD_DIR}/opt/googleappenginesdk
+
